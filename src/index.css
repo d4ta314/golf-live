@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: #050505;
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+.bg-mesh {
+  background: #050505;
+  position: relative;
+}
+
+.bg-mesh::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(circle at 1px 1px, rgba(16, 240, 160, 0.06) 1px, transparent 0);
+  background-size: 24px 24px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.bg-mesh > * {
+  position: relative;
+  z-index: 1;
+}
+
+.glass {
+  background: #0A0A0A;
+  border: 1px solid #1F1F1F;
+  transition: all 0.15s ease;
+}
+
+.glass:hover {
+  border-color: rgba(16, 240, 160, 0.2);
+  box-shadow: 0 0 20px rgba(16, 240, 160, 0.06);
+}
+
+.glass-strong {
+  background: #0F0F0F;
+  border: 1px solid #2A2A2A;
+}
+
+.glass-gold {
+  background: rgba(16, 240, 160, 0.06);
+  border: 1px solid rgba(16, 240, 160, 0.2);
+}
+
+.score-badge {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+input, select {
+  font-size: 16px !important;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
